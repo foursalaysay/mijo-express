@@ -1,35 +1,35 @@
 'use client'
 
-//COMPONENTS
-import LoginForm from '@/components/Reusables/LoginForm'
-import MainNavbar from '@/components/Reusables/MainNavbar'
-
-import Link from 'next/link'
-
-
 import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle
-} from "@/components/ui/navigation-menu"
+    NavigationMenu,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    navigationMenuTriggerStyle
+  } from "@/components/ui/navigation-menu"
 
+  import Link from 'next/link'
+  
 
-
-export default function Home() {
-  return (
-    <>
-
-       {/* Testing Page */}
-
-       
-       <NavigationMenu className='mt-30'>
-                <NavigationMenuList className="font-poppins flex flex-wrap gap-5">
-                    <NavigationMenuItem>
-                        <Link href="/providerpage" legacyBehavior passHref>
+export default function MainNavbar(){
+    return(
+        <div className="fixed bg-white shadow-xl flex flex-row justify-between px-10 w-full items-center h-20">
+            <div>
+                <h1>Mi <span>Jo</span>Express</h1>
+            </div>
+                <NavigationMenu>
+                <NavigationMenuList className="font-poppins flex flex-row gap-3">
+                <NavigationMenuItem>
+                        <Link href="/" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                Provider Testing
+                                Home
+                            </NavigationMenuLink>
+                        </Link>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem>
+                        <Link href="/about" legacyBehavior passHref>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                About
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
@@ -49,7 +49,7 @@ export default function Home() {
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
-       
-      </>
-  )
+        </div>
+
+    )
 }
