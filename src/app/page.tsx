@@ -26,6 +26,13 @@ export default function Home() {
        
        <NavigationMenu className='mt-30'>
                 <NavigationMenuList className="font-poppins flex flex-wrap gap-5">
+                <NavigationMenuItem>
+                        <Link href="/testing" legacyBehavior passHref>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                Testing Components
+                            </NavigationMenuLink>
+                        </Link>
+                    </NavigationMenuItem>
                     <NavigationMenuItem>
                         <Link href="/providerpage" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
