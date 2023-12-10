@@ -8,7 +8,7 @@ import ProviderNav from "./ProviderNav"
 
 export default function ProviderProfile(){
     return(
-        <div >
+        <div>
             <div>
                 <ProviderPhoto />
                 <ProviderInfo />
