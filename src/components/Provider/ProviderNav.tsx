@@ -8,10 +8,12 @@ import {
     NavigationMenuList,
     navigationMenuTriggerStyle
   } from "@/components/ui/navigation-menu"
+  import { Button } from '@/components/ui/button'
   
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 
 type Provider = {
@@ -27,6 +29,9 @@ const provider : Provider = {
 }
 
 export default function ProviderNav(){
+
+    const router = useRouter()
+
     return (
         <div className="w-1/5 h-screen fixed flex flex-col">
             {/* Provider Header */}
@@ -44,27 +49,28 @@ export default function ProviderNav(){
             <NavigationMenuList className='flex flex-col gap-2 m-5 '>
                 <NavigationMenuItem  className="w-56">
                     <Link href=''>
-                        <NavigationMenuLink className={`${navigationMenuTriggerStyle()} w-56 text-left font-poppins  hover:bg-yellow-400 hover:text-white`}>
+                        <NavigationMenuLink
+                         className={`${navigationMenuTriggerStyle()} w-56 text-left font-poppins  hover:bg-yellow-400 hover:text-white`}>
                             Job Feed
                         </NavigationMenuLink>
                     </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem  className="w-56 ">
-                    <Link href='provider-update'>
+                    <Link href='providerpage/providerprofile'>
                     <NavigationMenuLink className={`${navigationMenuTriggerStyle()} w-56 text-left font-poppins  hover:bg-yellow-400 hover:text-white`}>
                             Profile
                         </NavigationMenuLink>
                     </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem  className="w-56 ">
-                    <Link href='provider-update'>
+                    <Link href='providerpage/providerhistory'>
                     <NavigationMenuLink className={`${navigationMenuTriggerStyle()} w-56 text-left font-poppins  hover:bg-yellow-400 hover:text-white`}>
                             History
                         </NavigationMenuLink>
                     </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem  className="w-56 ">
-                    <Link href='provider-request'>
+                    <Link href='providerpage/providerrequest'>
                     <NavigationMenuLink className={`${navigationMenuTriggerStyle()} w-56 text-left font-poppins  hover:bg-yellow-400 hover:text-white`}>
                             Job Requests
                         </NavigationMenuLink>
@@ -72,7 +78,7 @@ export default function ProviderNav(){
                 </NavigationMenuItem>
                 
                 <NavigationMenuItem  className="w-56 ">
-                    <Link href='/'>
+                    <Link href='providerpage/providersetting'>
                     <NavigationMenuLink className={`${navigationMenuTriggerStyle()} w-56 text-left font-poppins  hover:bg-yellow-400 hover:text-white`}>
                             Settings
                         </NavigationMenuLink>
@@ -80,6 +86,7 @@ export default function ProviderNav(){
                 </NavigationMenuItem>
             </NavigationMenuList>
         </NavigationMenu>
+       
             </div>
         </div>
     )

@@ -1,20 +1,29 @@
-// pages/examplePage.js (or your desired component)
 
-import { useRouter } from 'next/router';
+'use client'
+import ProviderNotification from '@/app/providerpage/providernotification/page';
+import ProviderProfile from './ProviderProfile';
 
-const ExamplePage = () => {
-  const router = useRouter();
-  const currentURL = router.asPath;
+import { useSearchParams } from 'next/navigation'
+
+const ProviderBody = () => {
+  const SearchParams = useSearchParams();
+  
 
   // Function to check if the URL contains a specific string
   const checkURL = () => {
-    if (currentURL.includes('/specific-path')) {
+    if (SearchParams.has('/providerpage')) {
       return (
         <>
-          <div>Component 1</div>
-          <div>Component 2</div>
+          <ProviderProfile />
         </>
       );
+    }
+    else if(SearchParams.has('providernotification')){
+      return(
+        <>
+            <ProviderNotification />
+        </>
+      )
     } else {
       return null; // Or return a different component or null if you don't want to render anything
     }
@@ -27,4 +36,4 @@ const ExamplePage = () => {
   );
 };
 
-export default ExamplePage;
+export default ProviderBody;
