@@ -17,7 +17,7 @@ const provider : Provider = {
     profilePic:"/images/sampleProvider.jpg"
 }
 
-export default function ProviderNav(){
+export default function UserNav(){
 
    
 
@@ -37,22 +37,22 @@ export default function ProviderNav(){
             <div className="w-full flex flex-col p-1">
                 <Button asChild className='text-black'>
                     <Link
-                    className="w-72 h-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
-                    href='/providerpage'>Job Feed</Link>
+                    className="w-full h-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
+                    href='/userpage'>Provider Feed</Link>
                 </Button>
                  <Button asChild className='text-black'>
                     <Link
-                    className="w-72 h-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
-                    href='/providerpage/providerprofile'>Profile</Link>
+                    className="w-full h-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
+                    href='/userpage/providerprofile'>Profile</Link>
                 </Button>
                  <Button asChild className='text-black'>
                     <Link
-                    className="w-72 h-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
+                    className="w-fullh-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
                     href='/providerpage/providerhistory'>History</Link>
                 </Button>
                 <Button asChild className='text-black'>
                     <Link
-                    className="w-72 h-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
+                    className="w-full h-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
                     href='/providerpage/providerrequest'>Job Request</Link>
                 </Button>
                

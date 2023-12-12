@@ -1,5 +1,5 @@
 
-
+'use client'
 
 //SHADCN
 import { Button } from "@/components/ui/button"
@@ -28,9 +28,9 @@ import {
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function ProviderHeader(){
+export default function UserHeader(){
     return(
-        <div className="w-full h-20 mt-5 flex flex-row justify-around gap-10">
+        <div className="w-full h-32 flex flex-row justify-around gap-10">
         <div className="flex items-center justify-start gap-2 pl-10">
             <div className="relative">
                 <Input type="text" placeholder="Search here" className=" w-96 pl-8 pr-4 py-2 rounded-lg border border-gray-300 focus:border-blue-500 focus:outline-none" />
@@ -109,7 +109,7 @@ export default function ProviderHeader(){
                     <DropdownMenuContent>
                         <DropdownMenuLabel>My Account</DropdownMenuLabel>
                         <DropdownMenuSeparator />
-                        <DropdownMenuItem>Switch as Customer</DropdownMenuItem>
+                        <DropdownMenuItem>Become a Provider</DropdownMenuItem>
                         <DropdownMenuItem>Billing</DropdownMenuItem>
                         <DropdownMenuItem>Team</DropdownMenuItem>
                         <DropdownMenuItem>Logout</DropdownMenuItem>

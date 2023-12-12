@@ -54,6 +54,14 @@ export default function Home() {
                         </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
+
+                    <NavigationMenuItem >
+                        <Link  href="/userpage" legacyBehavior passHref>
+                        <NavigationMenuLink className={`${navigationMenuTriggerStyle()} bg-yellow-300 text-black`}>
+                            UserPage
+                        </NavigationMenuLink>
+                        </Link>
+                    </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
        

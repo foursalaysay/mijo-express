@@ -38,8 +38,9 @@ export default function ProviderHistory({ ProviderHistoryData }: ProviderHistory
           <p><strong>Contact Number:</strong> {history.contactNumber}</p>
           <p><strong>Date:</strong> {history.date}</p>
       </div>
-      <div className="flex flex-col gap-2 mt-6 ml-72">
-      <Button className="w-40">Delete</Button>
+      <div className="flex flex-col gap-2 mt-2 ml-72">
+      <Button className="w-40">Accept</Button>
+      <Button className="w-40">Decline</Button>
       <Button  className="w-40">View</Button>
       </div>
         

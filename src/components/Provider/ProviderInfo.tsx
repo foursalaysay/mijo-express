@@ -9,8 +9,9 @@ import { Button } from '@/components/ui/button'
 
 export default function ProviderInfo(){
     return(
-        <div className="w-3/6 m-10 h-5/6">
-            <ScrollArea className="h-96 w-full rounded-md border p-4">
+        <div className="w-11/12 mx-10 h-5/6">
+            <ScrollArea className="h-96 w-full rounded-md border p-8">
+                <hr />
                 <h1 className="my-5 font-poppins text-4xl font-medium">Change User Information</h1>
                 <h2 className="my-5 font-poppins text-xl font-medium">Personal Information</h2>
                 <div className="grid gric-cols-2 gap-x-5 gap-y-5 font-poppins">
@@ -39,9 +40,9 @@ export default function ProviderInfo(){
                     <Label htmlFor="confirmpassword">Confirm Password</Label>
                     <Input type="text" id="confirmpassword" placeholder="Confirm Password" />
                 </div>
-                <Button>Save Updated Information</Button>
+                
                 </div>
-               
+                <Button className="w-full mt-5">Save Updated Information</Button>
             </ScrollArea>
 
         </div>
