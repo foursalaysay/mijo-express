@@ -9,11 +9,9 @@ import { feedArray } from "@/components/sampleData/Data"
 
 export default function UserPage(){
     return(
-        <div className="max-w-8xl h-screen bg-white flex flex-row">
-            <div className="w-full bg-white">
+        <div className="max-w-8xl h-screen bg-white flex flex-col">       
                <UserHeader />
                <UserFeed feedArray={feedArray} />
-            </div>
         </div>
     )
 }

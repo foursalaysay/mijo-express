@@ -78,7 +78,17 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 
 
 const FormSchema = z.object({
-  type: z.enum(["all", "mentions", "none"], {
+  type: z.enum([
+  "house-cleaning",
+  "plumbing",
+  "electrician",
+  "pest",
+  "appliance",
+  "landscaping",
+  "hvac",
+  "security",
+  "interior",
+  "moving"], {
     required_error: "There's no services selected.",
   }),
 })
