@@ -1,5 +1,8 @@
 'use client'
 
+// ICONS
+import { CircleUserRound } from 'lucide-react';
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
@@ -38,22 +41,28 @@ export default function UserNav(){
                 <Button asChild className='text-black'>
                     <Link
                     className="w-full h-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
-                    href='/userpage'>Provider Feed</Link>
+                    href='/userpage'>User Feed</Link>
                 </Button>
-                 <Button asChild className='text-black'>
-                    <Link
-                    className="w-full h-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
-                    href='/userpage/providerprofile'>Profile</Link>
-                </Button>
+                <div className='flex flex-row items-center justify-center'>
+                    <CircleUserRound />
+                        <Link
+                        className="w-full h-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
+                        href='/userpage/userprofile'>User Profile</Link>
+                </div>
                  <Button asChild className='text-black'>
                     <Link
                     className="w-fullh-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
-                    href='/providerpage/providerhistory'>History</Link>
+                    href='/userpage/userappointment'>Requested Appointments</Link>
                 </Button>
                 <Button asChild className='text-black'>
                     <Link
                     className="w-full h-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
-                    href='/providerpage/providerrequest'>Job Request</Link>
+                    href='/userpage/userhistory'>Service History</Link>
+                </Button>
+                <Button asChild className='text-black'>
+                    <Link
+                    className="w-full h-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
+                    href='/userpage/userreview'>Rate and Review</Link>
                 </Button>
                
                 

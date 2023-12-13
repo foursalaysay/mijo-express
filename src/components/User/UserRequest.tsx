@@ -21,7 +21,7 @@ export default function DialogCloseButton() {
     <Dialog>
         <hr />
       <DialogTrigger asChild>
-        <Button className="w-40 bg-yellow-500">Service Request</Button>
+        <Button className="w-40 bg-yellow-500">Request for a Service</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
