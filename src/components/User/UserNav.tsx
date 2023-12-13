@@ -43,11 +43,10 @@ export default function UserNav(){
                     className="w-full h-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
                     href='/userpage'>User Feed</Link>
                 </Button>
-                <div className='flex flex-row items-center justify-center'>
+                <div className=" flex flex-row gap-5 w-full h-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins ">
                     <CircleUserRound />
                         <Link
-                        className="w-full h-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
-                        href='/userpage/userprofile'>User Profile</Link>
+                         href='/userpage/userprofile'>User Profile</Link>
                 </div>
                  <Button asChild className='text-black'>
                     <Link

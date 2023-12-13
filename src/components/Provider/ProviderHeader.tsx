@@ -13,6 +13,8 @@ import {
     SheetTitle,
     SheetTrigger,
   } from "@/components/ui/sheet"
+
+  import { ToggleAvailability } from '@/components/Provider/ToggleAvailability'
   
 
 import {
@@ -110,7 +112,9 @@ export default function ProviderHeader(){
                         <DropdownMenuLabel>My Account</DropdownMenuLabel>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem>Switch as Customer</DropdownMenuItem>
-                        <DropdownMenuItem>Billing</DropdownMenuItem>
+                        <DropdownMenuItem>
+                                <ToggleAvailability />
+                        </DropdownMenuItem>
                         <DropdownMenuItem>Team</DropdownMenuItem>
                         <DropdownMenuItem>Logout</DropdownMenuItem>
                     </DropdownMenuContent>

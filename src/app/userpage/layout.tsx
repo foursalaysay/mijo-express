@@ -1,8 +1,8 @@
 'use client'
 
-import UserNav from "@/components/User/UserNav"
-import React from "react"
 
+import React from "react"
+import UserNav from '@/components/User/UserNav'
 
 const ProviderLayout = ({children} : {children : React.ReactNode}) => {
     return(
