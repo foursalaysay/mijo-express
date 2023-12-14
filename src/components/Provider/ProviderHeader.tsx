@@ -13,8 +13,7 @@ import {
     SheetTitle,
     SheetTrigger,
   } from "@/components/ui/sheet"
-  import { Label } from "@/components/ui/label"
-  import { Switch } from "@/components/ui/switch"
+ 
 
   
   
@@ -115,10 +114,7 @@ export default function ProviderHeader(){
                         <DropdownMenuSeparator />
                         <DropdownMenuItem>Switch as Customer</DropdownMenuItem>
                         <DropdownMenuItem>
-                        <div className="flex items-center space-x-2">
-                        <Switch id="airplane-mode" />
-                        <Label htmlFor="airplane-mode">Airplane Mode</Label>
-                        </div>
+                        
                         </DropdownMenuItem>
                         <DropdownMenuItem>Next app</DropdownMenuItem>
                         <DropdownMenuItem>Logout</DropdownMenuItem>
