@@ -9,11 +9,9 @@ import { feedArray } from "@/components/sampleData/Data"
 
 export default function ProviderPage(){
     return(
-        <div className="max-w-8xl h-screen bg-white flex flex-row">
-            <div className="w-full bg-white">
-               <ProviderHeader />
-               <ProviderFeed feedArray={feedArray} />
-            </div>
+        <div className="max-w-8xl h-screen bg-white flex flex-col">
+            <ProviderHeader />
+            <ProviderFeed feedArray={feedArray} />
         </div>
     )
 }
