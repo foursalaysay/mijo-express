@@ -10,7 +10,7 @@ const ProviderLayout = ({children} : {children : React.ReactNode}) => {
         <div className="w-1/5">
             <UserNav  />
         </div>
-        <div className="w-4/5 bg-white">
+        <div className="w-4/5 h-screen bg-white">
            {children}
         </div>
     </div>

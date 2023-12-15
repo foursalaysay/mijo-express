@@ -1,11 +1,18 @@
 'use client'
 
 // ICONS
-import { CircleUserRound } from 'lucide-react';
+import { BookCopy } from 'lucide-react';
+import { User } from 'lucide-react';
+import { Contact2 } from 'lucide-react';
+import { History } from 'lucide-react';
+import { Star } from 'lucide-react';
+
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
+
+
+
 
 
 type Provider = {
@@ -38,34 +45,32 @@ export default function UserNav(){
             {/* Provider Navigation */}
             <div >
             <div className="w-full flex flex-col p-1">
-                <Button asChild className='text-black'>
-                    <Link
-                    className="w-full h-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
-                    href='/userpage'>User Feed</Link>
-                </Button>
-                <div className=" flex flex-row gap-5 w-full h-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins ">
-                    <CircleUserRound />
                         <Link
-                         href='/userpage/userprofile'>User Profile</Link>
-                </div>
-                 <Button asChild className='text-black'>
-                    <Link
-                    className="w-fullh-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
-                    href='/userpage/userappointment'>Requested Appointments</Link>
-                </Button>
-                <Button asChild className='text-black'>
-                    <Link
-                    className="w-full h-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
-                    href='/userpage/userhistory'>Service History</Link>
-                </Button>
-                <Button asChild className='text-black'>
-                    <Link
-                    className="w-full h-10 -pl-24 text-black bg-white hover:bg-yellow-400  justify-center items-center hover:text-white text-md font-poppins "
-                    href='/userpage/userreview'>Rate and Review</Link>
-                </Button>
-               
-                
-                
+                        className=" flex flex-row gap-5 w-full h-10 pl-5 text-black bg-white hover:bg-yellow-400  justify-start items-center hover:text-white text-sm  "
+                        href='/userpage'>
+                        <BookCopy />
+                        User Feed</Link>
+                        <Link
+                        className=" flex flex-row gap-5 w-full h-10 pl-5 text-black bg-white hover:bg-yellow-400  justify-start items-center hover:text-white text-sm  "
+                        href='/userpage/userprofile'>
+                         <User />
+                        User Profile</Link>
+                        <Link
+                        className=" flex flex-row gap-5 w-full h-10 pl-5 text-black bg-white hover:bg-yellow-400  justify-start items-center hover:text-white text-sm  "
+                        href='/userpage/userappointment'>
+                         <Contact2 />
+                        Requested Appointments</Link>
+                        <Link
+                        className=" flex flex-row gap-5 w-full h-10 pl-5 text-black bg-white hover:bg-yellow-400  justify-start items-center hover:text-white text-sm  "
+                        href='/userpage/userhistory'>
+                        <History />
+                        Service History</Link>
+                        <Link
+                        className=" flex flex-row gap-5 w-full h-10 pl-5 text-black bg-white hover:bg-yellow-400  justify-start items-center hover:text-white text-sm  "
+                        href='/userpage/userreview'>
+                        <Star />
+                        Rate and Review
+                        </Link>
             </div>
            
             </div>
