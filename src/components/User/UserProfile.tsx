@@ -4,7 +4,7 @@ import UserInfo from '@/components/User/UserInfo'
 
 export default function UserProfile(){
     return(
-        <div>
+        <div className='w-full h-[calc(100vh-100px)]'>  
             <UserPhoto />
             <UserInfo />
         </div>  

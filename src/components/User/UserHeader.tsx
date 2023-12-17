@@ -1,6 +1,4 @@
-
 'use client'
-
 //SHADCN
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -12,8 +10,7 @@ import {
     SheetHeader,
     SheetTitle,
     SheetTrigger,
-  } from "@/components/ui/sheet"
-  
+} from "@/components/ui/sheet"
 
 import {
     DropdownMenu,
@@ -28,9 +25,9 @@ import {
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function UserHeader(){
+export default function ProviderHeader(){
     return(
-        <div className="w-full h-32 flex flex-row justify-around gap-10">
+        <div className="w-full h-20 mt-5 flex flex-row justify-around gap-10">
         <div className="flex items-center justify-start gap-2 pl-10">
             <div className="relative">
                 <Input type="text" placeholder="Search here" className=" w-96 pl-8 pr-4 py-2 rounded-lg border border-gray-300 focus:border-blue-500 focus:outline-none" />
@@ -109,18 +106,16 @@ export default function UserHeader(){
                     <DropdownMenuContent>
                         <DropdownMenuLabel>My Account</DropdownMenuLabel>
                         <DropdownMenuSeparator />
-                        <DropdownMenuItem>Become a Provider</DropdownMenuItem>
-                        <DropdownMenuItem>Billing</DropdownMenuItem>
-                        <DropdownMenuItem>Team</DropdownMenuItem>
+                        <DropdownMenuItem>Switch as Customer</DropdownMenuItem>
+                        <DropdownMenuItem>
+                        
+                        </DropdownMenuItem>
+                        <DropdownMenuItem>Next app</DropdownMenuItem>
                         <DropdownMenuItem>Logout</DropdownMenuItem>
                     </DropdownMenuContent>
             </DropdownMenu>
-        </div>
-       
-        </div>
-            
-
-
+                </div>
+            </div>
         </div>
     )
 }

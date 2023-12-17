@@ -1,17 +1,15 @@
 'use client'
 
-import ProviderNav from "@/components/Provider/ProviderNav"
+
 import ProviderHeader from "@/components/Provider/ProviderHeader"
-import ProviderFeed from '@/components/Provider/ProviderFeed'
+import ProviderNotification from "@/components/Provider/ProviderNotification"
 
-
-
-
-export default function ProviderNotification(){
+export default function ProviderNotificationPage(){
     return(
         <div className="max-w-8xl h-screen bg-white flex flex-row">
             <div className="w-full bg-white">
                     <ProviderHeader />
+                    <ProviderNotification />
             </div>
         </div>
     )

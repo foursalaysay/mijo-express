@@ -3,7 +3,6 @@
 
   import {
     Card,
-    CardContent,
     CardDescription,
     CardFooter,
     CardHeader,
@@ -19,16 +18,7 @@
     DialogTrigger,
   } from "@/components/ui/dialog"
   
-  type Service = {
-    serviceId: number;
-    serviceCode: string;
-    serviceName: string;
-    providerName: string;
-    providerAddress: string;
-    providerContactNumber: string;
-    date: string;
-    status: "Accepted" | "Declined" | "Completed" | "In Progress";
-  };
+import { Service } from '@/lib/Types'
 
 
 export default function UserAppointmentStatus({services} : {services : Service[]}){
@@ -37,8 +27,7 @@ export default function UserAppointmentStatus({services} : {services : Service[]
         
        
         <div>
-            {services.map((getService) => (
-               
+            {services && services.map((getService) => (
                 <Card 
                 className="w-full h-20 flex flex-row gap-2"
                 key={getService.serviceId}> 

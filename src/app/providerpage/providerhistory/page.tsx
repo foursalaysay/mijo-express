@@ -9,11 +9,9 @@ import { ProviderHistoryData } from "@/components/sampleData/Data"
 
 export default function ProviderHistoryPage(){
     return(
-        <div className="max-w-8xl h-screen bg-white flex flex-row">
-            <div className="w-full bg-white">
-                    <ProviderHeader />
-                    <ProviderHistory ProviderHistoryData={ProviderHistoryData} />
-            </div>
+        <div className="max-w-8xl h-screen bg-white flex flex-col">
+                <ProviderHeader />
+                <ProviderHistory ProviderHistoryData={ProviderHistoryData} />
         </div>
     )
 }

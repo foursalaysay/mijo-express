@@ -16,7 +16,7 @@ import { Label } from "@/components/ui/label"
 
 
 
-export default function ProviderPhoto(){
+export default function UserPhoto(){
     return(
         <div className="w-11/12 flex flex-row my-5 mx-10 justify-between items-center shadow-xl rounded-lg ">
             <div className="flex flex-row gap-2 items-center justify-center">

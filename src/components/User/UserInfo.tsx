@@ -7,10 +7,10 @@ import { Button } from '@/components/ui/button'
 
 
 
-export default function UserInfo(){
+export default function ProviderInfo(){
     return(
         <div className="w-11/12 mx-10 h-5/6">
-            <ScrollArea className="h-96 w-full rounded-md border p-8">
+            <ScrollArea className="h-[320px] w-full rounded-md border p-8">
                 <hr />
                 <h1 className="my-5 font-poppins text-4xl font-medium">Change User Information</h1>
                 <h2 className="my-5 font-poppins text-xl font-medium">Personal Information</h2>

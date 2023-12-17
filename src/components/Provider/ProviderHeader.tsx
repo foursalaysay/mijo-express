@@ -1,5 +1,5 @@
 
-
+'use client'
 
 //SHADCN
 import { Button } from "@/components/ui/button"

@@ -26,7 +26,7 @@ export default function ProviderHistory({ ProviderHistoryData }: ProviderHistory
 
  
   return (
-    <ScrollArea className="h-[550px] w-11/12 rounded-md border mx-10 p-5 flex flex-col gap-5">
+    <ScrollArea className="h-[500px] w-11/12 rounded-md border mx-10 p-5 flex flex-col gap-5">
     
     {ProviderHistoryData.map((history) => (
       <div className="w-full rounded-lg bg-white shadow-lg mb-5 flex flex-row gap-5 p-4" key={history.id}>
