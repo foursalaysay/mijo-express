@@ -15,19 +15,23 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import FetchAddress from '@/components/sampleData/fetchAddress';
 
+import Address from '@/components/sampleData/fetchAddress'
 
 export default function Home() {
   return (
-    <>
+    <div className='flex flex-col h-screen overflow-hidden'>
       <MainNavbar />
-        <div className='flex flex-row h-screen pt-20'>
+      <FetchAddress />
+        <div className='flex flex-row h-[calc(100vh-80px)] pt-20'>
             <Image
             className='w-1/2 flex items-center justify-center m-auto'
           priority
           src={loginIcon}
           alt="Follow us on Twitter"
         />
+    
         
         <div className='w-1/2 flex items-start justify-start flex-col m-10'>
           
@@ -41,14 +45,11 @@ export default function Home() {
               <LoginForm />
             </CardContent>
             <CardFooter>
-              <Link href="/signup">Hello</Link>
-            
+              <Link href="/signup">Register</Link>
             </CardFooter>
         </Card>
-
         </div>
-        
       </div>
-      </>
+      </div>
   )
 }

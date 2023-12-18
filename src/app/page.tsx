@@ -15,6 +15,8 @@ import {
   navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu"
 
+import AddressComponent from '@/components/Reusables/AddressComponent'
+
 
 
 export default function Home() {
@@ -64,7 +66,7 @@ export default function Home() {
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
-       
+        <AddressComponent />
       </>
   )
 }
