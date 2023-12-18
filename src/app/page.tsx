@@ -1,11 +1,8 @@
 'use client'
 
-//COMPONENTS
-import LoginForm from '@/components/Reusables/LoginForm'
-import MainNavbar from '@/components/Reusables/MainNavbar'
-
 import Link from 'next/link'
-
+import background from '../../public/service.jpeg'
+import Image from 'next/image'
 
 import {
   NavigationMenu,
@@ -14,18 +11,25 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu"
-
-import AddressComponent from '@/components/Reusables/AddressComponent'
-
-
+import MainNavbar from '@/components/Reusables/MainNavbar'
 
 export default function Home() {
-  return (
+  return(
     <>
-
-       {/* Testing Page */}
-
-       
+        <div className='flex flex-row'>
+            <MainNavbar />
+            <Image
+            src={background}
+            alt='background'
+            height={600}
+            width={800}
+            className='pt-20'
+            />
+            <div className='h-screen max-w-3xl flex flex-col items-center justify-center ml-20'>
+                <h1 className='font-poppins text-6xl'>MiJo</h1>
+                <h1 className='font-poppins text-6xl'>Express</h1>
+            </div>
+        </div>
        <NavigationMenu className='mt-30'>
                 <NavigationMenuList className="font-poppins flex flex-wrap gap-5">
                 <NavigationMenuItem>
@@ -66,7 +70,6 @@ export default function Home() {
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
-        <AddressComponent />
       </>
   )
 }

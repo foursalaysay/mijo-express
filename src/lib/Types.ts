@@ -12,4 +12,8 @@ export type Service = {
     status: "Accepted" | "Declined" | "Completed" | "In Progress";
   };
 
-  
+//FETCH REGION ADDRESS
+export type getRegion = {
+  id:number,
+  name:string
+}
