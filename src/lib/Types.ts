@@ -13,7 +13,15 @@ export type Service = {
   };
 
 //FETCH REGION ADDRESS
-export type getRegion = {
-  id:number,
-  name:string
+
+export interface RegionProps {
+  region_code: string;
+  name: string;
 }
+
+export interface ProvinceProps {
+  region_code : string;
+  id : string;
+  name : string;
+}
+
