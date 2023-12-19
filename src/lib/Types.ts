@@ -25,3 +25,14 @@ export interface ProvinceProps {
   name : string;
 }
 
+export interface CityProps {
+  city_code : string
+  city_name : string
+  province_code : string
+  region_desc : string
+  psgc_code : string
+}
+
+export interface BaranggayProps {
+  
+}

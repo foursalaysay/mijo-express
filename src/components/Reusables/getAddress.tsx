@@ -6,6 +6,9 @@ import { RegionProps, ProvinceProps } from '@/lib/Types';
 
 export default function GetAddress(){
 
+    const 
+
+
     const [RegionValue, setRegionValue] = useState('');
     const [provinceValue, setProvinceValue ] = useState('');
     const [filteredProvinces, setFilteredProvinces] = useState<ProvinceProps[]>([]);

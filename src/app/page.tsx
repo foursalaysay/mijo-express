@@ -4,6 +4,8 @@ import Link from 'next/link'
 import background from '../../public/service.jpeg'
 import Image from 'next/image'
 
+import FetchAddress from '@/components/sampleData/fetchAddress'
+
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -28,6 +30,7 @@ export default function Home() {
             <div className='h-screen max-w-3xl flex flex-col items-center justify-center ml-20'>
                 <h1 className='font-poppins text-6xl'>MiJo</h1>
                 <h1 className='font-poppins text-6xl'>Express</h1>
+                <FetchAddress />
             </div>
         </div>
        <NavigationMenu className='mt-30'>
