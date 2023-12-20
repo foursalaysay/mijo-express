@@ -2,10 +2,10 @@ import { NextApiRequest, NextApiResponse } from "next"
 import { hash } from "bcryptjs"
 
 
-import { IUser } from "../../../types"
+import { IUser } from '@/lib/types/userType'
 import mongoose from "mongoose"
-import User from "../../../../models/user"
-import { connectToMongoDB } from "../../../../lib/mongodb"
+import User from "../../../../../models/user"
+import { connectToMongoDB } from "../../../../../lib/mongodb"
 
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
@@ -15,7 +15,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         if (!req.body) return res.status(400).json({ error: "Data is missing" })
 
         const { 
-            firstName, lastName, address, phoneNumber,  email,username, password, UserId, UserType 
+            firstName, lastName, address, phoneNumber,  email, username, password, UserId, UserType 
         } = req.body
 
         const userExists = await User.findOne({ username })
@@ -51,9 +51,15 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
                 }
 
                 const user = {
+                    userId : data.userId,
+                    firstName : data.firstName,
+                    lastName : data.lastName,
+                    address : data.address,
+                    phoneNumber : data.phoneNumber,
                     email: data.email,
-                    fullName: data.fullName,
-                    _id: data._id
+                    username : data.username,
+                    password : data.password,
+                    userType : data.userType
                 }
 
                 return res.status(201).json({
