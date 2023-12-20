@@ -43,16 +43,6 @@ type formType = {
 
 export default function RegisterPage(){
 
-  const form = useForm<formType~>({
-    resolver: zodResolver(FormSchema),
-    defaultValues: {
-     
-      username: "",
-      password:"",
-      firstName:"",
-      lastname:""
-    },
-  })
 
   function onSubmit(data: formType) {
     toast({
@@ -63,7 +53,7 @@ export default function RegisterPage(){
         </pre>
       ),
     })
-  }
+  } 
 
   return (
     <div className='flex flex-col'>
