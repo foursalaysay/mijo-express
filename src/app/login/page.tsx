@@ -27,8 +27,6 @@ export default function Home() {
           src={loginIcon}
           alt="Follow us on Twitter"
         />
-    
-        
         <div className='w-1/2 flex items-start justify-start flex-col m-10'>
           
           <h1 className='text-7xl font-extrabold'>Welcome</h1>
