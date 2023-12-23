@@ -10,12 +10,20 @@ import {
 
   import Link from 'next/link'
   
+  import hammer from '../../../public/images/hammer.jpg'
+  import Image from 'next/image'
 
 export default function MainNavbar(){
     return(
         <div className="fixed bg-white shadow-xl flex flex-row justify-between px-10 w-full items-center h-20">
-            <div>
-                <h1>Mi <span>Jo</span>Express</h1>
+            <div className="flex flex-row gap-2 items-center justify-center">
+                <Image
+                src={hammer}
+                alt="logo"
+                height={50}
+                width={50}
+                 />
+                <h1 className="text-lg font-poppins">Mi<span>Jo</span> Express</h1>
             </div>
                 <NavigationMenu>
                 <NavigationMenuList className="font-poppins flex flex-row gap-3">

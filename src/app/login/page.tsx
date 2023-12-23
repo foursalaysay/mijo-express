@@ -15,15 +15,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import FetchAddress from '@/components/sampleData/fetchAddress';
-
-import Address from '@/components/sampleData/fetchAddress'
 
 export default function Home() {
   return (
     <div className='flex flex-col h-screen overflow-hidden'>
       <MainNavbar />
-      <FetchAddress />
         <div className='flex flex-row h-[calc(100vh-80px)] pt-20'>
             <Image
             className='w-1/2 flex items-center justify-center m-auto'
