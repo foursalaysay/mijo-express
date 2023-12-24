@@ -1,7 +1,9 @@
+import UserHeader from '@/components/User/UserHeader'
+
 export default function UserHistoryPage(){
     return(
-        <div>
-            <h1>User History</h1>
+        <div className="max-w-8xl h-screen bg-white flex flex-col">       
+            <UserHeader />
         </div>
     )
 }
