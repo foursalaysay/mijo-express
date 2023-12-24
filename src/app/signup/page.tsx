@@ -68,6 +68,8 @@ export default function RegisterPage(){
             <p className='mt-5'>Fill up the form to create your account.</p>
 
             {/* CREATING THE FORM */}
+
+            
           </ScrollArea>
            
         </div>

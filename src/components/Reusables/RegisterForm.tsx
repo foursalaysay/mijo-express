@@ -17,7 +17,14 @@ import {
 import { Input } from "@/components/ui/input"
 import { toast } from "@/components/ui/use-toast"
 
-const FormSchema = z.object({
+const registerSchema = z.object({
+  firstName : z.string(),
+  lastName  : z.string(),
+  address:z.string(),
+  phoneNumber : z.string().regex(/^09\d{9}$/, {
+    message: "Phone Number starts with 09",
+  }),
+  email: z.string().email({ message: "Invalid email address" }),
   username: z.string().min(2, {
     message: "Username must be at least 2 characters.",
   }),
@@ -32,14 +39,21 @@ const FormSchema = z.object({
         "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.",
     }
   ),
-  email: z.string().email({ message: "Invalid email address" }),
+  userType : z.enum(["provider", "customer"]),
 })
 
 export function RegisterForm() {
-  const form = useForm<z.infer<typeof FormSchema>>({
-    resolver: zodResolver(FormSchema),
+  const form = useForm<z.infer<typeof registerSchema>>({
+    resolver: zodResolver(registerSchema),
     defaultValues: {
+      firstName="",
+      lastName="",
+      address:"",
+      phoneNumer:"",
+      email:"",
       username: "",
+      password:"",
+      userType:"", 
     },
   })
 
