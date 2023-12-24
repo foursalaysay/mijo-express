@@ -27,7 +27,7 @@ export default function UserAppointmentStatus({services} : {services : Service[]
         
        
         <div>
-            {services && services.map((getService) => (
+            {services ?  (services.map((getService) => (
                 <Card 
                 className="w-full h-20 flex flex-row gap-2"
                 key={getService.serviceId}> 
@@ -59,7 +59,12 @@ export default function UserAppointmentStatus({services} : {services : Service[]
                     </CardFooter>
                 </Card>
            
-            ))}
+            ))) : (
+                <div className='flex items-center justify-center'>
+                        <h1>No Services Available</h1>
+                </div>
+            
+            )}
         </div>
          
         
