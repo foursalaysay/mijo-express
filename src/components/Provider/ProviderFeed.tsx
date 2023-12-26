@@ -23,7 +23,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import Separator from '@/components/ui/separator'
+
 
 
 
@@ -43,7 +43,7 @@ export default function ProviderFeed({ feedArray }: ProviderFeedProps) {
                 <p className="text-lg font-semibold mb-2">{feedSample.name}</p>
                 <p className="text-gray-600">{feedSample.address}</p>
                 <p className="text-gray-600">{feedSample.contactNumber}</p>
-                <Separator />
+                
                 {/* PUT HERE ADDTIONAL INFO OF THE JOB */}
                 <Dialog>
                   <DialogTrigger className='text-sm hover:text-blue-500 hover:underline'>Click here for more details</DialogTrigger>
