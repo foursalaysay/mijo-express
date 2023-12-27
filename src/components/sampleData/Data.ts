@@ -2,85 +2,85 @@
 
 
 interface feed {
-    id: number;
-    name: string;
-    contactNumber: string;
-    address: string;
-    problemDetails: string;
-  }
+  id: number;
+  name: string;
+  contactNumber: string;
+  address: string;
+  skillSet: string[]; 
+}
 
-export const feedArray: feed[]= [
-    {
+export const feedArray: feed[] = [
+  {
       id: 1,
       name: 'Alice',
       contactNumber: '1234567890',
       address: '123 Main St',
-      problemDetails: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    },
-    {
+      skillSet: ['Communication', 'Problem Solving'],
+  },
+  {
       id: 2,
       name: 'Bob',
       contactNumber: '9876543210',
       address: '456 Elm St',
-      problemDetails: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
-    {
+      skillSet: ['Programming', 'Time Management'],
+  },
+  {
       id: 3,
       name: 'Charlie',
       contactNumber: '5555555555',
       address: '789 Oak St',
-      problemDetails: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
-    },
-    {
+      skillSet: ['Customer Service', 'Leadership'],
+  },
+  {
       id: 4,
       name: 'David',
       contactNumber: '1112223333',
       address: '101 Pine St',
-      problemDetails: 'Some problem details for David.',
-    },
-    {
+      skillSet: ['Problem Solving', 'Creativity'],
+  },
+  {
       id: 5,
       name: 'Eva',
       contactNumber: '4445556666',
       address: '202 Cedar St',
-      problemDetails: 'Problem details related to Eva.',
-    },
-    {
+      skillSet: ['Technical Skills', 'Analytical Thinking'],
+  },
+  {
       id: 6,
       name: 'Frank',
       contactNumber: '7778889999',
       address: '303 Maple St',
-      problemDetails: 'Frank has some specific problems.',
-    },
-    {
+      skillSet: ['Teamwork', 'Flexibility'],
+  },
+  {
       id: 7,
       name: 'Grace',
       contactNumber: '9990001111',
       address: '404 Oak St',
-      problemDetails: 'Grace needs assistance with something.',
-    },
-    {
+      skillSet: ['Adaptability', 'Decision Making'],
+  },
+  {
       id: 8,
       name: 'Henry',
       contactNumber: '2223334444',
       address: '505 Elm St',
-      problemDetails: 'Problem details for Henry.',
-    },
-    {
+      skillSet: ['Leadership', 'Conflict Resolution'],
+  },
+  {
       id: 9,
       name: 'Ivy',
       contactNumber: '6667778888',
       address: '606 Main St',
-      problemDetails: 'Ivy needs help with certain issues.',
-    },
-    {
+      skillSet: ['Customer Service', 'Negotiation'],
+  },
+  {
       id: 10,
       name: 'Jack',
       contactNumber: '3334445555',
       address: '707 Oak St',
-      problemDetails: 'Jack is facing some challenges.',
-    },
-  ];
+      skillSet: ['Teamwork', 'Adaptability'],
+  },
+];
 
 
 
