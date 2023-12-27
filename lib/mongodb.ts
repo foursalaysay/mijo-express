@@ -1,12 +1,17 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-const url = process.env.DATABASE_URL as string;
+const connect = async () => {
+  try {
+    const databaseUrl = process.env.DATABASE_URL;
 
-let connection : typeof mongoose;
+    if (!databaseUrl) {
+      throw new Error('Database URL is not provided');
+    }
 
-const startDb = async () => {
-    if(!connection) connection = await mongoose.connect(url);
-    return connection
-}
+    await mongoose.connect(databaseUrl);
+  } catch (error) {
+    throw new Error('Error in Connecting to MongoDB');
+  }
+};
 
-export default startDb
+export default connect;

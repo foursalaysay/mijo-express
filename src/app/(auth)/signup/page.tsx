@@ -6,6 +6,9 @@ import Image from 'next/image';
 import MainNavbar from '@/components/Reusables/MainNavbar';
 import RegisterForm from "@/components/Reusables/RegisterForm";
 
+export const POST = async () => {
+  console.log("Recording Data");
+}
 
 
 export default function RegisterPage(){
@@ -21,6 +24,7 @@ export default function RegisterPage(){
             <ScrollArea className="w-full rounded-md border p-4 h-[calc(100vh-80px)]">
               <h1 className='font-poppins text-black text-7xl'>Register Here!</h1>
               <p className='mt-5'>Fill up the form to create your account.</p>
+
               {/* CREATING THE FORM */}
               <RegisterForm />
             </ScrollArea>

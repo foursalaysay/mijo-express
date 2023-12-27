@@ -71,40 +71,31 @@ const userSchema = new Schema<IUser, {}, Methods>({
             } 
 })
 
-userSchema.pre("save", async function (next){
-    if(!this.isModified("password"))
-        return next();
-    try{
-        const salt = await bcrypt.genSalt(10);
-        this.password = await bcrypt.hash(this.password, salt);
-        next();
-
-    }catch(error){
-        console.log("Error in hashing a Password")
-        throw error 
+userSchema.pre<IUser>('save', async function (next) {
+    if (!this.isModified('password')) {
+      return next();
     }
-})
-
-userSchema.methods.comparePassword = async function (password){
-    try{
-        return await bcrypt.compare(password, this.password)
-    }catch(error){
-        throw error
+    try {
+      const salt = await bcrypt.genSalt(10);
+      this.password = await bcrypt.hash(this.password, salt);
+      next();
+    } catch (error) {
+      console.error('Error in hashing a Password:', error);
+      next();
     }
-}
-
-// userSchema.methods.comparePassword = async function (password: string): Promise<boolean> {
-//     try {
-//         return await bcrypt.compare(password, this.password);
-//     } catch (error) {
-//         throw error;
-//     }
-// };
-
-const UserModel = models.User || model("User", userSchema);
-
-export default UserModel as Model<IUser, {}, Methods>;
-
+  });
+  
+  userSchema.methods.comparePassword = async function (password) {
+    try {
+      return await bcrypt.compare(password, this.password);
+    } catch (error) {
+      throw error;
+    }
+  };
+  
+  const UserModel = models.User || model<IUser, Model<IUser, {}, Methods>>('User', userSchema);
+  
+  export default UserModel;
 
 
 // const UserSchema = new Schema({
