@@ -45,7 +45,7 @@ export default function LoginForm() {
   }
 
   return (
-    <div className="max-w-5xl h-full border-2 border-gray-700 p-10">
+    <div className="max-w-5xl h-full p-10">
     <h1 className='font-poppins text-6xl mb-5'>Login</h1>
     <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="w-96 space-y-6">
@@ -56,7 +56,7 @@ export default function LoginForm() {
               <FormItem>
                 <FormLabel className="font-poppins">Username</FormLabel>
                 <FormControl>
-                  <Input {...field} className='w-full border-b-gray-600 bottom-1 focus:outline-none' />
+                  <Input {...field} className='w-full border-b-gray-600 bottom-1 focus:outline-none rounded-none' />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -68,19 +68,19 @@ export default function LoginForm() {
             <FormItem>
               <FormLabel  className="font-poppins">Password</FormLabel>
               <FormControl>
-                <Input {...field} className='w-full' />
+                <Input {...field}  className='w-full border-b-gray-600 bottom-1 focus:outline-none rounded-none' />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
           <Button
-          className="w-full font-poppins"
+          className="w-full font-poppins bg-yellow-500"
           type="submit">Sign In</Button>
         </form>
         <div className="w-full mt-10 flex items-center ml-32 gap-2">
           <p className=" cursor-pointer select-none hover:underline hover:text-blue-500">Register</p>
-          <Separator orientation="vertical" />
+            <Separator orientation="vertical" className='h-5' />
           <p className=" cursor-pointer select-none hover:underline hover:text-blue-500">Login</p>
         </div>
       </Form>

@@ -1,7 +1,7 @@
 
 import { NextResponse } from "next/server"
-import startDb from "../../../../../lib/mongodb"
-import UserModel from "../../../../../models/user";
+import startDb from "../../../../lib/mongodb"
+import UserModel from "../../../../models/user";
 
 interface NewUserRequest {
     userId : string,
@@ -29,6 +29,7 @@ interface NewUserResponse {
 type NewResponse = NextResponse<{ user?: NewUserResponse; error?: string }>;
 
 export const POST = async (req : Request ): Promise<NewResponse> => {
+   
     const body = (await req.json()) as NewUserRequest;
 
     await startDb();
@@ -43,15 +44,10 @@ export const POST = async (req : Request ): Promise<NewResponse> => {
         const user = await UserModel.create({...body});
 
         return NextResponse.json({
-            user: {
-                userId: user.userId,
-                firstName: user.firstName,
-                lastName: user.lastName,
-                address: user.address,
-                phoneNumber: user.phoneNumber,
-                email: user.email,
-                username: user.username,
-                userType: user.userType,
-            }
+            user
         });
 };
+
+export const GET = async (req: Request, res: Response) => {
+    console.log("POST REQUEST");
+}

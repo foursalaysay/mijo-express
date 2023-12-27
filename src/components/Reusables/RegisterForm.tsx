@@ -1,5 +1,6 @@
 "use client"
 
+import React, { useState } from 'react'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
@@ -24,9 +25,9 @@ import {
 
 
 const registerSchema = z.object({
-  firstName : z.string(),
-  lastName  : z.string(),
-  address:z.string(),
+  firstName : z.string().min(1, {message: "First Name is required"}),
+  lastName  : z.string().min(1, {message: 'Last Name is required'}),
+  address:z.string().min(1, {message: "Address is required"}),
   phoneNumber : z.string().regex(/^09\d{9}$/, {
     message: "Phone Number starts with 09",
   }),
@@ -74,6 +75,10 @@ export default function RegisterForm() {
     })
   }
 
+  const [ userValue, setUserValue ] = useState('');
+
+ 
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
@@ -83,9 +88,9 @@ export default function RegisterForm() {
           name="firstName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>First Name</FormLabel>
               <FormControl>
-                <Input placeholder="First Name" {...field} />
+                <Input placeholder="First Name" className='w-full border-b-gray-600 bottom-1 focus:outline-none rounded-none' {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -96,9 +101,9 @@ export default function RegisterForm() {
           name="lastName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>Last Name</FormLabel>
               <FormControl>
-                <Input placeholder="Last Name" {...field} />
+                <Input placeholder="Last Name" className='w-full border-b-gray-600 bottom-1 focus:outline-none rounded-none' {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -109,9 +114,9 @@ export default function RegisterForm() {
           name="address"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>Address</FormLabel>
               <FormControl>
-                <Input placeholder="Address" {...field} />
+                <Input placeholder="Address"  className='w-full border-b-gray-600 bottom-1 focus:outline-none rounded-none' {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -122,9 +127,9 @@ export default function RegisterForm() {
           name="phoneNumber"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>Phone Number</FormLabel>
               <FormControl>
-                <Input placeholder="Phone Number" {...field} />
+                <Input placeholder="Phone Number" className='w-full border-b-gray-600 bottom-1 focus:outline-none rounded-none'  {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -135,22 +140,9 @@ export default function RegisterForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="Email" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-         <FormField
-          control={form.control}
-          name="username"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Username</FormLabel>
-              <FormControl>
-                <Input placeholder="Username" {...field} />
+                <Input placeholder="Email"  className='w-full border-b-gray-600 bottom-1 focus:outline-none rounded-none' {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -161,35 +153,37 @@ export default function RegisterForm() {
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>Password</FormLabel>
               <FormControl>
-                <Input placeholder="Password" {...field} />
+                <Input placeholder="Password" className='w-full border-b-gray-600 bottom-1 focus:outline-none rounded-none' {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-         <FormField
-          control={form.control}
-          name="userType"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Username</FormLabel>
-              <FormControl>
-              <Select {...field}>
-              <SelectTrigger className="w-[180px]">
-                <SelectValue placeholder="Select User Type" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="provider">Provider</SelectItem>
-                <SelectItem value="customer">Customer</SelectItem>
-              </SelectContent>
-            </Select>
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+         <div>
+           <FormField
+            control={form.control}
+            name="userType"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>User Type:</FormLabel>
+                <FormControl>
+                <Select {...field} >
+                <SelectTrigger className="w-[180px]">
+                  <SelectValue placeholder="Select User Type" />
+                </SelectTrigger>
+                <SelectContent className='w-full border-b-gray-600 bottom-1 focus:outline-none rounded-none'>
+                  <SelectItem value="provider">Provider</SelectItem>
+                  <SelectItem value="customer">Customer</SelectItem>
+                </SelectContent>
+              </Select>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+                   />
+         </div> 
         <Button type="submit">Submit</Button>
       </form>
     </Form>
