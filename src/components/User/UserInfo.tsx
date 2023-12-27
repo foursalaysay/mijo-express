@@ -16,9 +16,14 @@ export default function ProviderInfo(){
                 <h2 className="my-5 font-poppins text-xl font-medium">Personal Information</h2>
                 <div className="grid gric-cols-2 gap-x-5 gap-y-5 font-poppins">
                 <div className="grid w-full max-w-sm items-center gap-1.5 ">
-                    <Label htmlFor="name">Name</Label>
+                    <Label htmlFor="firstName">First Name</Label>
                     <Input type="text" id="name" placeholder="Name" />
                 </div>
+                <div className="grid w-full max-w-sm items-center gap-1.5 ">
+                    <Label htmlFor="lastName">Last Name</Label>
+                    <Input type="text" id="name" placeholder="Name" />
+                </div>
+                
                 <div className="grid w-full max-w-sm items-center gap-1.5">
                     <Label htmlFor="email">Email</Label>
                     <Input type="email" id="email" placeholder="Email" />
