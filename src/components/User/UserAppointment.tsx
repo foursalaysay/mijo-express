@@ -60,7 +60,6 @@ export default function UserAppointment({services} : {services : Service[]}){
                             </Dialog>
                     </CardFooter>
                 </Card>
-           
             ))) : (
                 <div className='flex items-center justify-center'>
                         <h1>No Services Available</h1>

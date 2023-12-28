@@ -1,6 +1,6 @@
 
 
-const services = [
+ export const services = [
     {
       serviceId: 1,
       serviceCode: "SC001",
