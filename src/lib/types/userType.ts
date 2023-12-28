@@ -14,3 +14,17 @@
 //     comparePassword(password : string) : Promise<boolean>;
 // }
 
+
+export interface userHistory {
+    tRef : string,
+    tName: string, 
+    tPrice : number,
+    tDate :Date,
+}
+
+export interface UserTransactionHistory extends userHistory {
+    providerId : string,
+    providerName : string,
+    providerNumber : string,
+    providerAddress : string
+}

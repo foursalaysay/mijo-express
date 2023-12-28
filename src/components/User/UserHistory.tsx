@@ -2,14 +2,7 @@
 
 import { ScrollArea } from '@/components/ui/scroll-area'
 
-interface userHistory {
-    tId : string,
-    tName: string, 
-    tPrice : number,
-    tDate : 
-
-
-}
+import { UserTransactionHistory } from '@/lib/types/userType'
 
 
 export default function UserHistory(){
