@@ -19,21 +19,23 @@ export default function UserHistory(userTransactionData : UserTransactionHistory
         <div className='h-[calc(100vh - 128px)]'>
             <ScrollArea className="h-[500px] w-11/12 rounded-md border mx-10">
                 {userTransactionData ? (userTransactionData.map((userEachTransaction : UserTransactionHistory) => (
-                        <Card key={userEachTransaction.tRef} className='w-full px-5 h-20'>
-                                <CardHeader>
+                        <Card key={userEachTransaction.tRef} className='w-full px-5 h-20 flex flex-row gap-2'>
+                                <CardHeader className='w-1/3'>
                                     <CardTitle>Card Title</CardTitle>
                                     <CardDescription>Card Description</CardDescription>
                                 </CardHeader>
-                                <CardContent>
+                                <CardContent className='w-1/3'>
                                     <p>Card Content</p>
                                 </CardContent>
-                                <CardFooter>
+                                <CardFooter className='w-1/3'>
                                     <p>Card Footer</p>
                                 </CardFooter>
                             </Card>
                 
                 ))) : (
-                    
+                    <div>
+                        <h1>No History Available</h1>
+                    </div>
                 )}
 
             </ScrollArea>
