@@ -7,7 +7,7 @@ import ProviderInfo from "./ProviderInfo"
 
 export default function ProviderProfile(){
     return(
-            <div>
+        <div className='w-full h-[calc(100vh-80px)] overflow-hidden'> 
                 <ProviderPhoto />
                 <ProviderInfo />
             </div>  

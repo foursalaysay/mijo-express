@@ -1,7 +1,7 @@
 
 import { UserTransactionHistory } from '@/lib/types/userType'
 
-export const UserTransactionData : UserTransactionHistory [] = [
+export const UserTransactionData : UserTransactionHistory[] = [
     {
         tRef: 'Ref1',
         tName: 'Transaction 1',
