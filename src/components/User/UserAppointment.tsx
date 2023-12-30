@@ -10,6 +10,7 @@ import {
 	Card,
 	CardDescription,
 	CardFooter,
+	CardContent,
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
@@ -34,81 +35,30 @@ export default function UserAppointment({ services }: { services: Service[] }) {
 						<Card
 							className="w-full h-20 flex flex-row gap-2"
 							key={getService.serviceId}>
-							<CardHeader>
+							<CardHeader className='flex flex-col gap-2'>
 								<CardTitle>{getService.serviceName}</CardTitle>
 								<CardDescription>{getService.serviceCode}</CardDescription>
 							</CardHeader>
-
-<<<<<<< HEAD
-
-
-export default function UserAppointment({services} : {services : Service[]}){
-    return(
-        <ScrollArea className="w-full">
-            <div>
-            {services.length > 0  ?  (services.map((getService) => (
-                <Card 
-                className="w-full h-20 flex flex-row gap-2"
-                key={getService.serviceId}> 
-                    <CardHeader>
-                        <CardTitle>{getService.serviceName}</CardTitle>
-                        <CardDescription>{getService.serviceCode}</CardDescription>
-                    </CardHeader>
-                    
-                    <CardFooter>
-                        <Dialog>
-                            <DialogTrigger>More Info</DialogTrigger>
-                            <DialogContent>
-                                <DialogHeader>
-                                <DialogTitle>More Details</DialogTitle>
-                                <DialogDescription>
-                                    
-                                </DialogDescription>
-                                </DialogHeader>
-                                <div>
-                                        <p>{getService.providerName}</p>
-                                        <p>{getService.providerAddress}</p>
-                                        <p>{getService.providerContactNumber}</p>
-                                    </div>
-                                    <div>
-                                        <p>{getService.date}</p>
-                                        <p>{getService.status}</p>
-                                    </div>
-                            </DialogContent>
-                            </Dialog>
-                    </CardFooter>
-                </Card>
-            ))) : (
-                <div className='flex items-center justify-center'>
-                        <h1>No Services Available</h1>
-                </div>
-            
-            )}
-        </div>
-
-        </ScrollArea>
-    )
-=======
-							<CardFooter>
+							<CardContent>
 								<Dialog>
-									<DialogTrigger>More Info</DialogTrigger>
-									<DialogContent>
-										<DialogHeader>
-											<DialogTitle>More Details</DialogTitle>
-											<DialogDescription></DialogDescription>
-										</DialogHeader>
-										<div>
-											<p>{getService.providerName}</p>
-											<p>{getService.providerAddress}</p>
-											<p>{getService.providerContactNumber}</p>
-										</div>
-										<div>
-											<p>{getService.date}</p>
-											<p>{getService.status}</p>
-										</div>
-									</DialogContent>
+										<DialogTrigger>More Info</DialogTrigger>
+										<DialogContent>
+											<DialogHeader>
+												<DialogTitle>More Details</DialogTitle>
+												<DialogDescription></DialogDescription>
+											</DialogHeader>
+											<div>
+												<p>{getService.providerName}</p>
+												<p>{getService.providerAddress}</p>
+												<p>{getService.providerContactNumber}</p>
+											</div>
+											<div>
+												<p>{getService.date}</p>
+												<p>{getService.status}</p>
+											</div>
+										</DialogContent>
 								</Dialog>
-							</CardFooter>
+							</CardContent>
 						</Card>
 					))
 				) : (
@@ -119,5 +69,4 @@ export default function UserAppointment({services} : {services : Service[]}){
 			</div>
 		</ScrollArea>
 	);
->>>>>>> 1ca0dd1ef0ac038d5ee94c03625360b0e46c07b3
 }
