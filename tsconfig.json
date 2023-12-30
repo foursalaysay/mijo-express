@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/providerpage/providernotification", "src/app/providerpage/layout.tjs"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/providerpage/notification", "src/app/providerpage/layout.tjs"],
   "exclude": ["node_modules"]
 }
