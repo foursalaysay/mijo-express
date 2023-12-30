@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button'
 
 
 export default function ProviderInfo(){
-    return(1111111111111111111111
+    return(
         <div className="w-11/12 mx-10 h-5/6">
             <ScrollArea className="h-[320px] w-full rounded-md border p-8">
                 <hr />

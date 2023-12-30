@@ -35,7 +35,7 @@ export default function UserAppointment({services} : {services : Service[]}){
                 key={getService.serviceId}> 
                     <CardHeader>
                         <CardTitle>{getService.serviceName}</CardTitle>
-                        <CardDescription>Card Description</CardDescription>
+                        <CardDescription>{getService.serviceCode}</CardDescription>
                     </CardHeader>
                     
                     <CardFooter>
@@ -45,7 +45,10 @@ export default function UserAppointment({services} : {services : Service[]}){
                                 <DialogHeader>
                                 <DialogTitle>More Details</DialogTitle>
                                 <DialogDescription>
-                                    <div>
+                                    
+                                </DialogDescription>
+                                </DialogHeader>
+                                <div>
                                         <p>{getService.providerName}</p>
                                         <p>{getService.providerAddress}</p>
                                         <p>{getService.providerContactNumber}</p>
@@ -54,8 +57,6 @@ export default function UserAppointment({services} : {services : Service[]}){
                                         <p>{getService.date}</p>
                                         <p>{getService.status}</p>
                                     </div>
-                                </DialogDescription>
-                                </DialogHeader>
                             </DialogContent>
                             </Dialog>
                     </CardFooter>
