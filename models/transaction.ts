@@ -5,7 +5,7 @@ import { models, model } from 'mongoose'
 
 export interface userFeedPropsReserve{
     id : String,
-    userId : String,
+    customerId : String,
     customerName : String,
     customerAddress: String,
     customerContact: String,
@@ -37,11 +37,12 @@ export const userFeedTransactionModel = models.userFeedReserve || model<userFeed
 
 export interface userFeedPropsRequest{
     requestId : String,
-    userId : String,
-    userName : String,
-    userAddress : String,
-    userContact : String,
-    serviceName : String
+    customerId : String,
+    customerName : String,
+    customerAddress : String,
+    customerContact : String,
+    serviceName : String,
+    date : Date
   
 }
 
@@ -51,7 +52,8 @@ const userFeedTransaction2 = new mongoose.Schema({
     userName: { type : String, required: true},
     userAddress: {type: String, required : true},
     userContact: {type: String, required : true},
-    serviceName : {type: String, required: true}
+    serviceName : {type: String, required: true},
+    date : {type: Date, required : true}
 })
 
 export const userFeedRequestModel = models.userFeedRequest || model<userFeedPropsRequest>('userFeedRequest',userFeedTransaction2)
