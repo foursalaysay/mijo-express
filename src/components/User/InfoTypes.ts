@@ -1,6 +1,7 @@
+import { Service } from "@/lib/Types";
 
 
- export const services = [
+ export const services : Service[] = [
     {
       serviceId: 1,
       serviceCode: "SC001",

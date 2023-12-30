@@ -4,6 +4,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { Service } from '@/lib/Types'
 
 
+
 import {
     Card,
     CardDescription,
@@ -29,7 +30,7 @@ export default function UserAppointment({services} : {services : Service[]}){
     return(
         <ScrollArea className="w-full">
             <div>
-            {services ?  (services.map((getService) => (
+            {services.length > 0  ?  (services.map((getService) => (
                 <Card 
                 className="w-full h-20 flex flex-row gap-2"
                 key={getService.serviceId}> 
