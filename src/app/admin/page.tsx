@@ -1,52 +1,24 @@
 /** @format */
+"use client";
 
-import {
-	NavigationMenu,
-	NavigationMenuItem,
-	NavigationMenuLink,
-	NavigationMenuList,
-	navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+import { NextPage } from "next";
+import React from "react";
+import { PieGraphTransactions } from "./components/pie-graph-transactions";
+import { TransactionsTable } from "./components/transactions-table";
 
-import Link from "next/link";
-
-export default function AdminPage() {
+const DashboardPage: NextPage = () => {
 	return (
-		<div className="w-96 md:w-2/3 lg:w-screen">
-			<div>
-				<aside>
-					<NavigationMenu>
-						<NavigationMenuList>
-							<NavigationMenuItem>
-								<Link href="/" legacyBehavior passHref>
-									<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-										Home
-									</NavigationMenuLink>
-								</Link>
-							</NavigationMenuItem>
-							<NavigationMenuItem>
-								<Link href="/about" legacyBehavior passHref>
-									<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-										About
-									</NavigationMenuLink>
-								</Link>
-							</NavigationMenuItem>
-							<NavigationMenuItem>
-								<Link href="/signup" legacyBehavior passHref>
-									<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-										SignUp
-									</NavigationMenuLink>
-								</Link>
-							</NavigationMenuItem>
-						</NavigationMenuList>
-					</NavigationMenu>
-				</aside>
-
-				<main>
-					<section></section>
-				</main>
+		<div >
+			<div className=" p-5">
+				<h1 className="text-2xl font-bold mb-5">Dashboard Page</h1>
+				{/* Add your content here */}
+				<div className="flex flex-wrap gap-5">
+					<PieGraphTransactions />
+					<TransactionsTable />
+				</div>
 			</div>
-			<footer></footer>
 		</div>
 	);
-}
+};
+
+export default DashboardPage;
